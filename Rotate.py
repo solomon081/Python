@@ -11,7 +11,7 @@ def cls():
 
 pi = math.pi
 
-def D(angle, point="", center=(0,0)):
+def d(angle, point="", center=(0,0)):
 	def roundsin(sininput):
 		diff = math.sin(sininput)-round(math.sin(sininput), 10)
 		if abs(diff) <= 0.000000000000001:
@@ -74,7 +74,7 @@ def D(angle, point="", center=(0,0)):
 	#print pointprime
 	return pointprime
 
-def R(angle, point="", center=(0,0)):
+def r(angle, point="", center=(0,0)):
 	def roundsin(sininput):
 		diff = math.sin(sininput)-round(math.sin(sininput), 10)
 		if abs(diff) <= 0.000000000000001:
