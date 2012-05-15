@@ -9,6 +9,8 @@ def cls():
 
 #from sympy import *
 
+pi = math.pi
+
 def D(angle, point="", center=(0,0)):
 	def roundsin(sininput):
 		diff = math.sin(sininput)-round(math.sin(sininput), 10)
@@ -137,19 +139,24 @@ def R(angle, point="", center=(0,0)):
 def help():
 	x = 1
 	while x != 0:
-	print "This function gives the coordinates of a point rotated through an angle about a center of rotation"
-	print "To input the angle in degrees, type \"D\"."
-	print "To input the angle in radians, type \"R\"."
-	selection = raw_input()
-	if selection = "R":
-		point = input("Choose a point to rotate:")
-		angle = input("Choose how many degrees would you like to rotate the point", point, ":")
-		center = input("Choose a center of rotation about which to rotate:")
-		D(angle, point, center)
-	elif selection = "D":
-		pass
-	else:
-		print
+		print "This function gives the coordinates of a point rotated through an angle about a center of rotation."
+		print "To input the angle in degrees, type \"D\"."
+		print "To input the angle in radians, type \"R\"."
+		selection = raw_input()
+		if selection == "D":
+			point = input("Choose a point to rotate:")
+			print "Choose how many degrees you would like to rotate the point", point,":"
+			angle = input()
+			center = input("Choose a center of rotation about which to rotate:")
+			if center == "":
+				center = (0,0)
+			x = 0
+			output = D(angle, point, center)
+			return output
+		elif selection == "R":
+			pass
+		else:
+			print
 #angle = input("angle=")
 #point = input("point=")
 #Rotate(angle, point)
